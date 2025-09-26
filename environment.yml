@@ -1,0 +1,19 @@
+name: mythical_worlds
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - bs4
+      - requests
+      - pandas
+      - numpy
+      - faiss-cpu
+      - sentence-transformers
+      - tqdm
+      - ipywidgets
+      - ollama
+      - streamlit
+      - -e .
