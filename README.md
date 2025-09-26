@@ -1,6 +1,18 @@
-# Mythical Worlds Explorer
+# Mythical Worlds
 
 This project is a Retrieval-Augmented Generation (RAG) pipeline designed to answer questions about a collection of mythological and fantasy texts from Project Gutenberg.
+
+## Things I Learnt
+1. What does a RAG pipeline look like?
+2. Vector databases
+    - FAISS
+    - Chroma
+    - Pros and Cons
+    - Search methods - L2, Cosine, Dot
+    - Indexing methods - Exact, ANN
+3. Text foundational models optimized for embeddings
+4. Answer generation based on embedddings using full LLMs
+5. Basic front end using Streamlit (full list of technoloiges below)
 
 ## Workflow
 

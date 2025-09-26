@@ -6,8 +6,8 @@ from sentence_transformers import SentenceTransformer
 import ollama
 
 # Paths
-INDEX_PATH = "../../data/vector_store/faiss.index"
-METADATA_PATH = "../../data/vector_store/metadata.json"
+INDEX_PATH = "./data/vector_store/faiss.index"
+METADATA_PATH = "./data/vector_store/metadata.json"
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 
@@ -72,9 +72,9 @@ def rag_query(query: str, model: str, k: int = 3):
 
 
 # ---------- Streamlit UI ----------
-st.set_page_config(page_title="Mythical Worlds Explorer", page_icon="📜", layout="wide")
+st.set_page_config(page_title="Mythical Worlds", page_icon="📜", layout="wide")
 
-st.title("📜 Mythical Worlds Explorer")
+st.title("📜 Mythical Worlds")
 st.markdown(
     "Ask questions about myths and legends, powered by Retrieval-Augmented Generation (RAG)."
 )
