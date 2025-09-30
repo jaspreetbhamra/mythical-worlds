@@ -1,13 +1,14 @@
-import streamlit as st
-import faiss
 import json
+
+import faiss
 import numpy as np
-from sentence_transformers import SentenceTransformer
 import ollama
+import streamlit as st
+from sentence_transformers import SentenceTransformer
 
 # Paths
-INDEX_PATH = "./data/vector_store/faiss.index"
-METADATA_PATH = "./data/vector_store/metadata.json"
+INDEX_PATH = "../data/vector_store/faiss.index"
+METADATA_PATH = "../data/vector_store/metadata.json"
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 

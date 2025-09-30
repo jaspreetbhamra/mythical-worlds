@@ -1,14 +1,15 @@
-import os
-import json
 import glob
+import json
+import os
+from typing import Dict, List
+
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from typing import List, Dict
 
 # Paths
-PROCESSED_DIR = "data/processed/"
-INDEX_DIR = "data/vectorstore/"
+PROCESSED_DIR = "../data/processed/"
+INDEX_DIR = "../data/vector_store/"
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"  # small & fast
 
 

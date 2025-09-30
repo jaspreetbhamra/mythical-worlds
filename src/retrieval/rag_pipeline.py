@@ -1,13 +1,14 @@
 import argparse
-import faiss
 import json
+
+import faiss
 import numpy as np
-from sentence_transformers import SentenceTransformer
 import ollama
+from sentence_transformers import SentenceTransformer
 
 # Paths
-INDEX_PATH = "data/vectorstore/faiss.index"
-METADATA_PATH = "data/vectorstore/metadata.json"
+INDEX_PATH = "../data/vector_store/faiss.index"
+METADATA_PATH = "../data/vector_store/metadata.json"
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 

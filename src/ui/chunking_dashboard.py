@@ -363,5 +363,38 @@ if Path(results_dir).exists():
     else:
         st.info("No similarity scores available yet.")
 
+    st.header("🤖 Hallucination Analysis")
+
+    halluc_path = st.text_input(
+        "Path to hallucination results CSV",
+        "data/experiments/hallucination/iliad_results.csv",
+    )
+
+    if Path(halluc_path).exists():
+        df_halluc = pd.read_csv(halluc_path)
+        st.subheader("Results Table")
+        st.dataframe(df_halluc[["question", "hallucinated"]])
+
+        # Overall rate
+        rate = df_halluc["hallucinated"].mean()
+        st.metric("Hallucination Rate", f"{rate:.1%}")
+
+        # Breakdown
+        fig, ax = plt.subplots(figsize=(6, 4))
+        df_halluc["hallucinated"].value_counts().plot.pie(
+            autopct="%1.1f%%", labels=["Not Hallucinated", "Hallucinated"], ax=ax
+        )
+        st.pyplot(fig)
+
+        # Drilldown
+        st.subheader("Sample Answers")
+        for i, row in df_halluc.head(5).iterrows():
+            with st.expander(f"Q: {row['question']}"):
+                st.write("**Answer:**", row["answer"])
+                st.write("**Hallucinated?**", row["hallucinated"])
+                st.write("**Sources:**", row["retrieved_titles"])
+    else:
+        st.info("Run hallucination_eval.py first to generate results.")
+
 else:
     st.warning("Results folder not found. Run experiment_chunking.py first.")

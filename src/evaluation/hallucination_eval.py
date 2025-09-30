@@ -4,9 +4,8 @@ from pathlib import Path
 
 import pandas as pd
 import yaml
-from rag_pipeline import (
-    rag_query,
-)  # assumes your rag_query(query, model, k) returns (answer, retrieved_chunks)
+
+from retrieval.rag_pipeline import rag_query
 
 
 # -----------------------------
