@@ -1,0 +1,37 @@
+queries:
+  - question: "Who is Beowulf and what are his key heroic deeds?"
+    keywords: ["beowulf", "hero", "grendel", "dragon", "warrior"]
+    domain: "beowulf"
+  - question: "How does Beowulf defeat Grendel?"
+    keywords: ["beowulf", "grendel", "fight", "strength", "mead hall"]
+    domain: "beowulf"
+  - question: "What is the role of Hrothgar in Beowulf?"
+    keywords: ["hrothgar", "king", "danes", "heorot", "leader"]
+    domain: "beowulf"
+  - question: "Describe the battle between Beowulf and Grendel’s mother."
+    keywords: ["beowulf", "grendel's mother", "fight", "lake", "sword"]
+    domain: "beowulf"
+  - question: "What happens during Beowulf’s fight with the dragon?"
+    keywords: ["beowulf", "dragon", "battle", "treasure", "death"]
+    domain: "beowulf"
+  - question: "What themes of loyalty and kinship are present in Beowulf?"
+    keywords: ["loyalty", "kinship", "fate", "honor", "thane"]
+    domain: "beowulf"
+  - question: "How does the poem portray fate (wyrd) and destiny?"
+    keywords: ["wyrd", "fate", "destiny", "anglo-saxon", "belief"]
+    domain: "beowulf"
+  - question: "What role does treasure and gift-giving play in Beowulf?"
+    keywords: ["treasure", "gift", "gold", "kingship", "reward"]
+    domain: "beowulf"
+  - question: "What is the significance of Heorot, Hrothgar’s mead hall?"
+    keywords: ["heorot", "hall", "hrothgar", "danes", "mead"]
+    domain: "beowulf"
+  - question: "How does Beowulf die, and how is he honored after death?"
+    keywords: ["beowulf", "death", "funeral", "dragon", "burial"]
+    domain: "beowulf"
+  - question: "What is the role of Wiglaf in the final battle?"
+    keywords: ["wiglaf", "beowulf", "dragon", "loyalty", "thane"]
+    domain: "beowulf"
+  - question: "What values of Anglo-Saxon warrior culture are reflected in Beowulf?"
+    keywords: ["anglo-saxon", "culture", "warrior", "honor", "valor"]
+    domain: "beowulf"

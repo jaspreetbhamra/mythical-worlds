@@ -16,4 +16,7 @@ dependencies:
       - ipywidgets
       - ollama
       - streamlit
+      - matplotlib
+      - seaborn
+      - plotly
       - -e .

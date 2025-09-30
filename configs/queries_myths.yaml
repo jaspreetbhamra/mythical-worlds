@@ -1,0 +1,63 @@
+queries:
+  # Generic Test
+  - question: "Who was Odin and what was his role?"
+    keywords: ["odin", "all-father", "asgard", "yggdrasil"]
+  - question: "What was the quest for the Holy Grail about?"
+    keywords: ["grail", "arthur", "lancelot", "perceval", "galahad"]
+  - question: "Who is Beowulf and what did he accomplish?"
+    keywords: ["beowulf", "grendel", "dragon", "hrothgar"]
+  - question: "Who is Zeus and what is he known for?"
+    keywords: ["zeus", "olympus", "thunder", "sky"]
+  - question: "What is Andúril and who wielded it?"
+    keywords: ["andúril", "aragorn", "narsil", "sword"]
+
+  # Classical Epics
+  - question: "Who was Aeneas and what was his destiny?"
+    keywords: ["aeneas", "rome", "founding", "italy", "destiny"]
+  - question: "What trials did Odysseus face on his journey home?"
+    keywords: ["odysseus", "cyclops", "sirens", "calypso", "ithaca"]
+  - question: "What role did Achilles play in the Trojan War?"
+    keywords: ["achilles", "trojan war", "hector", "patroclus"]
+  - question: "What happened to Daphne in Ovid’s Metamorphoses?"
+    keywords: ["daphne", "apollo", "laurel", "tree"]
+
+  # Norse / Germanic
+  - question: "What is Ragnarök and which gods are fated to die?"
+    keywords: ["ragnarok", "odin", "thor", "loki", "fenrir"]
+  - question: "What knowledge did Odin gain from the Well of Mimir?"
+    keywords: ["odin", "mimir", "well", "wisdom"]
+  - question: "Who was Siegfried in the Nibelungenlied?"
+    keywords: ["siegfried", "dragon", "nibelungen", "kriemhild"]
+  - question: "What monster did Beowulf defeat before facing the dragon?"
+    keywords: ["beowulf", "grendel", "monster"]
+
+  # Arthurian / Celtic
+  - question: "What knights sought the Holy Grail?"
+    keywords: ["grail", "lancelot", "galahad", "perceval"]
+  - question: "What is the story of Culhwch and Olwen?"
+    keywords: ["culhwch", "olwen", "arthur", "welsh"]
+  - question: "What happened when King Arthur drew Excalibur?"
+    keywords: ["arthur", "excalibur", "sword", "stone"]
+  - question: "Which heroes appear in Irish Fairy Tales?"
+    keywords: ["dermot", "finn", "oisin", "irish"]
+
+  # Fairy Tales
+  - question: "Who tricked the wolf in Little Red Riding Hood?"
+    keywords: ["red riding hood", "wolf", "grandmother"]
+  - question: "How did the Ugly Duckling’s story end?"
+    keywords: ["ugly duckling", "swan"]
+  - question: "What happened when Jack planted the magic beans?"
+    keywords: ["jack", "beans", "giant", "beanstalk"]
+  - question: "Which fairy tales involve giants?"
+    keywords: ["giant", "beanstalk", "ogre"]
+
+  # Out-of-Corpus (Negative Controls)
+  - question: "What is the One Ring and who bore it?"
+    keywords: ["one ring", "frodo", "sauron", "gollum"]
+  - question: "Who was Dumbledore and what school did he run?"
+    keywords: ["dumbledore", "hogwarts", "wizard"]
+  - question: "Who is Iron Man in the Marvel universe?"
+    keywords: ["iron man", "tony stark", "avengers"]
+  - question: "What is Hogwarts and who studied there?"
+    keywords: ["hogwarts", "harry potter", "ron", "hermione"]
+
