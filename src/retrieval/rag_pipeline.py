@@ -30,7 +30,20 @@ def embed_query(query: str, model_name: str = EMBED_MODEL) -> np.ndarray:
 # ---------- Retrieve top-k chunks ----------
 def retrieve(query_vec: np.ndarray, index, metadata, k: int = 3):
     distances, indices = index.search(query_vec, k)
-    results = [metadata[str(idx)] for idx in indices[0] if str(idx) in metadata]
+    results = []
+    for rank, idx in enumerate(indices[0]):
+        idx = str(idx)
+        if idx in metadata:
+            results.append(
+                {
+                    "rank": rank,
+                    "score": float(
+                        distances[0][rank]
+                    ),  # cosine similarity (since we used normalized vectors)
+                    "text": metadata[idx]["text"],
+                    "title": metadata[idx].get("title", "N/A"),
+                }
+            )
     return results
 
 

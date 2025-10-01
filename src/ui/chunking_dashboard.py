@@ -373,26 +373,51 @@ if Path(results_dir).exists():
     if Path(halluc_path).exists():
         df_halluc = pd.read_csv(halluc_path)
         st.subheader("Results Table")
-        st.dataframe(df_halluc[["question", "hallucinated"]])
+        st.dataframe(df_halluc[["question", "hallucinated", "top_score"]])
 
         # Overall rate
         rate = df_halluc["hallucinated"].mean()
         st.metric("Hallucination Rate", f"{rate:.1%}")
 
-        # Breakdown
+        # Pie chart
         fig, ax = plt.subplots(figsize=(6, 4))
         df_halluc["hallucinated"].value_counts().plot.pie(
             autopct="%1.1f%%", labels=["Not Hallucinated", "Hallucinated"], ax=ax
         )
         st.pyplot(fig)
 
+        # Similarity distribution
+        fig2, ax2 = plt.subplots(figsize=(8, 5))
+        sns.histplot(
+            df_halluc[~df_halluc["hallucinated"]]["top_score"],
+            color="green",
+            label="Not Hallucinated",
+            kde=True,
+            bins=20,
+            ax=ax2,
+        )
+        sns.histplot(
+            df_halluc[df_halluc["hallucinated"]]["top_score"],
+            color="red",
+            label="Hallucinated",
+            kde=True,
+            bins=20,
+            ax=ax2,
+        )
+        ax2.set_title("Top Cosine Similarity: Hallucinated vs Not")
+        ax2.set_xlabel("Top score")
+        ax2.set_ylabel("Count")
+        ax2.legend()
+        st.pyplot(fig2)
+
         # Drilldown
         st.subheader("Sample Answers")
         for i, row in df_halluc.head(5).iterrows():
-            with st.expander(f"Q: {row['question']}"):
+            with st.expander(f"Q: {row['question']} (score={row['top_score']:.2f})"):
                 st.write("**Answer:**", row["answer"])
                 st.write("**Hallucinated?**", row["hallucinated"])
                 st.write("**Sources:**", row["retrieved_titles"])
+
     else:
         st.info("Run hallucination_eval.py first to generate results.")
 

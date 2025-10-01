@@ -1,7 +1,7 @@
-import os
-from pathlib import Path
-import re
 import json
+import os
+import re
+from pathlib import Path
 from typing import List
 
 DATA_DIR = Path("data/raw/")
@@ -38,16 +38,31 @@ def clean_gutenberg_text(text: str) -> str:
 
 
 # ----------- STEP 3: Chunking -----------
-def chunk_text(text: str, max_words: int = 200) -> List[str]:
-    """
-    Split text into chunks of ~max_words words.
-    Adjust max_words depending on downstream embedding/tokenizer.
-    """
+# def chunk_text(text: str, max_words: int = 200) -> List[str]:
+#     """
+#     Split text into chunks of ~max_words words.
+#     Adjust max_words depending on downstream embedding/tokenizer.
+#     """
+#     words = text.split()
+#     chunks = []
+#     for i in range(0, len(words), max_words):
+#         chunk = " ".join(words[i : i + max_words])
+#         chunks.append(chunk)
+#     return chunks
+
+
+def chunk_text(text: str, max_words: int, overlap_words: int, source: str = None):
     words = text.split()
+    step = max_words - overlap_words
     chunks = []
-    for i in range(0, len(words), max_words):
-        chunk = " ".join(words[i : i + max_words])
-        chunks.append(chunk)
+    for i in range(0, len(words), step):
+        chunk_words = words[i : i + max_words]
+        if not chunk_words:
+            break
+        chunk_text = " ".join(chunk_words)
+        chunks.append({"text": chunk_text, "source": source})  # e.g. "iliad"
+        if i + max_words >= len(words):
+            break
     return chunks
 
 

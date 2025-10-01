@@ -1,0 +1,33 @@
+queries:
+  - question: "What role does Hera play in influencing the war?"
+    keywords: ["hera", "zeus", "gods", "greeks", "troy"]
+    domain: "iliad"
+  - question: "How does Athena intervene in key battles?"
+    keywords: ["athena", "battle", "trojans", "greeks", "intervention"]
+    domain: "iliad"
+  - question: "What role does Apollo play in spreading plague in the Achaean camp?"
+    keywords: ["apollo", "plague", "greeks", "agamemnon", "chryses"]
+    domain: "iliad"
+  - question: "How are women like Helen, Andromache, and Briseis portrayed in the Iliad?"
+    keywords: ["helen", "andromache", "briseis", "women", "troy"]
+    domain: "iliad"
+  - question: "What is the significance of the Catalogue of Ships?"
+    keywords: ["catalogue of ships", "greeks", "trojans", "armies", "epic"]
+    domain: "iliad"
+  - question: "How does the Iliad portray the brutality of war?"
+    keywords: ["war", "death", "battle", "bloodshed", "violence"]
+    domain: "iliad"
+
+  # Beowolf from here on out
+  - question: "Who is Beowulf and what are his key heroic deeds?"
+    keywords: ["beowulf", "hero", "grendel", "dragon", "warrior"]
+    domain: "beowulf"
+  - question: "How does Beowulf defeat Grendel?"
+    keywords: ["beowulf", "grendel", "fight", "strength", "mead hall"]
+    domain: "beowulf"
+  - question: "What is the role of Hrothgar in Beowulf?"
+    keywords: ["hrothgar", "king", "danes", "heorot", "leader"]
+    domain: "beowulf"
+  - question: "Describe the battle between Beowulf and Grendel’s mother."
+    keywords: ["beowulf", "grendel's mother", "fight", "lake", "sword"]
+    domain: "beowulf"
